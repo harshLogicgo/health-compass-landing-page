@@ -4,7 +4,7 @@
 
 @layer components {
   .bannerSection {
-    @apply bg-cover bg-left min-h-[280px] sm:min-h-[480px] h-[calc(100vh-550px)] sm:h-[calc(100vh-400px)] lg:h-[calc(100vh-300px)] xl:h-[calc(100vh-94px)];
+    @apply bg-cover bg-left min-h-[270px] sm:min-h-[480px] h-[calc(100vh-600px)] xl:h-[calc(100vh-94px)];
   }
 
   .infoPattern1 {

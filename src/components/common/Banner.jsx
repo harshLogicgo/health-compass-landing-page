@@ -85,7 +85,7 @@ const Banner = () => {
         {!isPlay && (
           <img
             onClick={handlePlay}
-            className="w-[80px] sm:w-[150px] cursor-pointer zoom-animation"
+            className="w-[80px] sm:w-[120px] md:w-[150px] cursor-pointer zoom-animation"
             src={Images.other.play}
             alt=""
           />
