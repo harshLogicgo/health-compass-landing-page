@@ -74,7 +74,7 @@ const Banner = () => {
             backgroundPosition: "left 30%",
           }}
         >
-          <div className="absolute inset-0 bg-primary/65 xl:hidden"></div>
+          {/* <div className="absolute inset-0 bg-primary/65 xl:hidden"></div> */}
         </div>
       )}
 
