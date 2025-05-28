@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <>
       <header className="w-full bg-primary z-[50]">
-        <div className="container mx-auto px-4">
+        {/* <div className="container mx-auto px-4">
           <div className="py-2  text-xs text-white flex justify-center items-center font-semibold">
             <p>
               Supplements Simplified for You -{" "}
@@ -34,7 +34,7 @@ const Header = () => {
               </Link>
             </p>
           </div>
-        </div>
+        </div> */}
         <nav className="bg-white relative top-0 shadow-lg">
           <div className="relative">
             <div className="container mx-auto px-4 py-4">
@@ -48,15 +48,15 @@ const Header = () => {
                 </Link>
 
                 {/* Mobile menu button */}
-                <button
+                {/* <button
                   className="md:hidden text-text-primary"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                   {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
+                </button> */}
 
                 {/* Desktop navigation */}
-                <div className="hidden md:flex items-center space-x-8">
+                {/* <div className="hidden md:flex items-center space-x-8">
                   <ul className="flex space-x-6 md:me-[60px] xl:me-[100px]">
                     {navItems.map((item, index) => {
                       const title = item.title;
@@ -87,16 +87,13 @@ const Header = () => {
                   >
                     Log in
                   </Link>
-                  {/* <Link href="/signup" className="btn-primary">
-                  Sign up
-                </Link> */}
                   <button
                     onClick={handleOpenModal}
                     className="btn-primary cursor-pointer"
                   >
                     Sign up
                   </button>
-                </div>
+                </div> */}
               </div>
 
               {/* Mobile navigation */}

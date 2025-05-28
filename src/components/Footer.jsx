@@ -8,24 +8,25 @@ export default function Footer() {
   return (
     <footer className="bg-dark-teal-blue text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 items-end">
+        <div className="">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 items-end"> */}
           {/* Logo and description */}
-          <span>
+          <span className="block text-center">
             <a href={"#"}>
               <Image
                 src={Images.footerLogo} // Replace with your actual logo path
                 alt="Health Compass Logo"
                 width={220}
                 height={100}
-                className="mb-4"
+                className="mb-4 mx-auto"
               />
             </a>
             <p className="text-md text-gray-100">
-              Lorem ipsum has been the industry's standard dummy text ever.
+              2968 South Coast Hwy, <br /> #2604 Laguna Beach, CA 92651
             </p>
           </span>
 
-          {footerData.map((item, index) => {
+          {/* {footerData.map((item, index) => {
             const title = item.title;
             const data = item.data;
             return (
@@ -48,11 +49,10 @@ export default function Footer() {
                 </ul>
               </div>
             );
-          })}
+          })} */}
         </div>
 
         <div className="border-t flex flex-col gap-4 sm:flex-row items-center justify-between border-white/30 mt-6 sm:mt-12 pt-6 text-sm text-gray-400 text-center md:text-right">
-          {/* Footer Bottom */}
           <div className="flex space-x-3">
             {socialData.map((item, index) => {
               const Icon = item.icon;

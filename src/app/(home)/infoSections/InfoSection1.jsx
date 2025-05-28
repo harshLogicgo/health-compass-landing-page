@@ -11,7 +11,7 @@ const InfoSection1 = () => {
           <div className="flex flex-col justify-between h-full items-start md:py-8">
             <span>
               <h2 className="section-title md:mb-8 mb-4 relative">
-                Lorem Ipsum is therefore always free from
+                Stay On Track with HealthCompass
                 <span>
                   <img
                     className="title-pattern"
@@ -21,12 +21,14 @@ const InfoSection1 = () => {
                 </span>
               </h2>
               <p className="section-subtitle mb-8 md:mb-6">
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration
+                Helping seniors manage their health, appointments, and
+                supplements with smart AI support. Effortlessly track
+                medications, set reminders, and stay connected with your
+                healthcare journey.
               </p>
             </span>
-            <div className="flex w-full items-center xl:mb-8">
-              <div className="flex w-full sm:w-[300px] items-center w-md border-gray-300 border border-r-0 rounded-l-lg py-[10px] px-4">
+            {/* <div className="flex w-full items-center xl:mb-8">
+              <div className="flex w-full sm:w-[300px] w-md border-gray-300 border border-r-0 rounded-l-lg py-[10px] px-4">
                 <Phone
                   className="text-primary me-3 hidden md:block"
                   size={20}
@@ -37,8 +39,25 @@ const InfoSection1 = () => {
                   className="flex-1  focus:outline-none"
                 />
               </div>
-              <button className="bg-primary text-white py-[11px] font-semibold md:py-[15px] px-3 md:px-6 rounded-r-lg hover:bg-primary-light transition-colors">
+              <button className="bg-primary text-white font-semibold px-3 md:px-6 rounded-r-lg hover:bg-primary-light transition-colors">
                 Submit
+              </button>
+            </div> */}
+
+            <div className="flex w-full xl:mb-8 ">
+              <div className="flex w-full sm:w-[300px] items-center border-black border border-r-0 rounded-l-lg py-[10px] px-4">
+                <Phone className="text-black me-3 hidden md:block" size={20} />
+                <input
+                  type="tel"
+                  placeholder="Enter your Phone Number"
+                  className="flex-1 focus:outline-none"
+                />
+              </div>
+              <button
+                // onClick={handleOpenModal}
+                className="bg-primary text-nowrap text-white font-semibold px-3 md:px-6 rounded-r-lg hover:bg-primary-light transition-colors"
+              >
+                Submit{" "}
               </button>
             </div>
           </div>

@@ -20,45 +20,57 @@ import { Images } from "@/data/images";
 const testimonials = [
   {
     id: 1,
-    name: "Thomas Daniel",
-    avatar: "/placeholder.svg?height=100&width=100",
+    name: "Thomas daniel",
+    age: "45, Physician ",
+    avatar:
+      "https://avatars.mds.yandex.net/i?id=d9b2a0b864f9d65322265c07dd2a56df3870f975-4495103-images-thumbs&n=13",
     rating: 5,
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+    text: "With years of experience, he has earned a reputation for being reliable, compassionate, and deeply committed to patient care",
   },
   {
     id: 2,
     name: "Alena Alex",
-    avatar: "/placeholder.svg?height=100&width=100",
+    age: "55, User",
+    avatar:
+      "https://i.pinimg.com/originals/2e/82/d2/2e82d272e5f49490efd2d733e4322e5a.jpg",
     rating: 5,
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+    text: "Alena Alex is a 55-year-old user known for her thoughtful insights and positive attitude. She brings a wealth of life experience and a practical perspective to any setting.",
   },
   {
     id: 3,
+    age: " 65, Caregiver",
     name: "Thomas Edison",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar:
+      "https://www.fortunebuilders.com/wp-content/uploads/2015/02/surviving-the-real-estate-business.jpg",
     rating: 5,
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+    text: "Thomas Edison is a 65-year-old caregiver with a warm heart and a strong sense of responsibility. His compassionate nature and years of dedication make him a trusted presence in caregiving.",
   },
   {
-    id: 4,
-    name: "Marie Curie",
-    avatar: "/placeholder.svg?height=100&width=100",
+    id: 1,
+    name: "Thomas daniel",
+    age: "45, Physician ",
+    avatar:
+      "https://avatars.mds.yandex.net/i?id=d9b2a0b864f9d65322265c07dd2a56df3870f975-4495103-images-thumbs&n=13",
     rating: 5,
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+    text: "With years of experience, he has earned a reputation for being reliable, compassionate, and deeply committed to patient care",
   },
   {
-    id: 5,
-    name: "Albert Einstein",
-    avatar: "/placeholder.svg?height=100&width=100",
+    id: 2,
+    name: "Alena Alex",
+    age: "55, User",
+    avatar:
+      "https://i.pinimg.com/originals/2e/82/d2/2e82d272e5f49490efd2d733e4322e5a.jpg",
     rating: 5,
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+    text: "Alena Alex is a 55-year-old user known for her thoughtful insights and positive attitude. She brings a wealth of life experience and a practical perspective to any setting.",
   },
   {
-    id: 6,
-    name: "Isaac Newton",
-    avatar: "/placeholder.svg?height=100&width=100",
+    id: 3,
+    age: " 65, Caregiver",
+    name: "Thomas Edison",
+    avatar:
+      "https://www.fortunebuilders.com/wp-content/uploads/2015/02/surviving-the-real-estate-business.jpg",
     rating: 5,
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+    text: "Thomas Edison is a 65-year-old caregiver with a warm heart and a strong sense of responsibility. His compassionate nature and years of dedication make him a trusted presence in caregiving.",
   },
 ];
 
@@ -80,33 +92,29 @@ export default function TestimonialsSection() {
 
   return (
     <section className="relative overflow-hidden section-container px-0">
-      <div className="mx-auto ">
-        <div className="text-center main-container mb-12 relative">
+      <div className="mx-auto">
+        <div className="text-start main-container mb-12 ">
           <h2 className="section-title relative inline-block">
-            Our Happy Clients
+            Our Happy People
             <img
               className="title-pattern top-[100%] left-[50%]"
               src={Images.other.titlePattern}
               alt=""
             />
           </h2>
-          <p className="section-subtitle max-w-2xl mx-auto">
+          {/* <p className="section-subtitle max-w-2xl mx-auto">
             There are many variations of passages of Lorem Ipsum available, but
             the majority have suffered alteration in some form.
-          </p>
-          <img
-            className="pattern-l-top mt-[100px] md:mt-0"
-            src={Images.other.infoPattern}
-            alt=""
-          />
+          </p> */}
+          {/*           
           <img
             className="pattern-r-top"
             src={Images.other.infoPattern}
             alt=""
-          />
+          /> */}
         </div>
 
-        <div className="relative testimonials-slider">
+        <div className="relative testimonials-slider h-full">
           <Swiper
             modules={[Navigation, Pagination, A11y, Autoplay]}
             spaceBetween={0}
@@ -141,11 +149,11 @@ export default function TestimonialsSection() {
             className="pb-12"
           >
             {testimonials.map((testimonial) => (
-              <SwiperSlide className="py-6 p-4" key={testimonial.id}>
-                <div className="testimonial-card h-full">
+              <SwiperSlide className="py-6 p-4 h-full" key={testimonial.id}>
+                <div className="testimonial-card h-full flex flex-col">
                   <div className="flex items-center mb-3">
                     <Image
-                      src={Images.other.user1}
+                      src={testimonial?.avatar || Images.other.user1}
                       //   src={testimonial.avatar}
                       alt={testimonial.name}
                       width={80}
@@ -163,13 +171,19 @@ export default function TestimonialsSection() {
                       </div>
                     </div>
                   </div>
-                  <p className="text-[15px] leading-6 text-gray-600 line-clamp-5">
+                  <p className="text-[15px]  text-gray-600">
                     {testimonial.text}
                   </p>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
+
+          <img
+            className="pattern-l-bottom mb-[20px]"
+            src={Images.other.infoPattern}
+            alt=""
+          />
 
           {/* Navigation Buttons */}
           <span className="flex items-center justify-center gap-4 mt-10">

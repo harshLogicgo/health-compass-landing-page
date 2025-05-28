@@ -14,7 +14,7 @@ export default function Home() {
       <main>
         <Banner />
         <InfoSection />
-        <NewsSection />
+        {/* <NewsSection /> */}
         <SimpleToolsSection />
         <DiscoverSection />
         <TestimonialsSection />

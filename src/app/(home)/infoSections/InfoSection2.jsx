@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Images } from "@/data/images";
-import { ShieldCheck } from "lucide-react";
+import { Mail, ShieldCheck } from "lucide-react";
 
 const InfoSection2 = () => {
   return (
@@ -25,15 +25,16 @@ const InfoSection2 = () => {
         </div>
         <div className="order-1 md:order-2">
           <h2 className="section-title md:mb-6 mb-4 relative">
-            It is a long established fact that a reader will be
+            Smarter Care Starts Here
             <img
-              className="title-pattern"
+              className="title-pattern bottom-0 mt-5"
               src={Images.other.titlePattern}
               alt=""
             />
           </h2>
-          <p className="section-subtitle mb-8 md:mb-10">
-            Many desktop publishing packages and web page <br /> editors now use
+          <p className="section-subtitle mb-8 md:mb-10 xl:w-[60%]">
+            HealthCompass uses advanced AI to help older adults and caregivers
+            manage
           </p>
           <div className="space-y-3 mb-10 md:mb-12">
             <div className="feature-item">
@@ -53,9 +54,22 @@ const InfoSection2 = () => {
               <span>Enrollment is quick and easy</span>
             </div>
           </div>
-          <a href="#" className="btn-teal py-4 px-6 md:px-8">
-            Book an appointment
-          </a>
+          <div className="flex w-full mb-7 mt-14 sm:mt-6">
+            <div className="flex w-[300px] items-center border-black border border-r-0 rounded-l-lg py-[10px] px-4">
+              <Mail className="text-black me-3 hidden md:block" size={20} />
+              <input
+                type="email"
+                placeholder="Enter your Email"
+                className="flex-1 focus:outline-none"
+              />
+            </div>
+            <button
+              // onClick={handleOpenModal}
+              className="bg-primary text-nowrap text-white font-semibold px-3 md:px-6 rounded-r-lg hover:bg-primary-light transition-colors"
+            >
+              Submit
+            </button>
+          </div>
         </div>
       </div>
     </div>
