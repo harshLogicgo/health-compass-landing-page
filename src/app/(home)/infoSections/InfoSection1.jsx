@@ -44,7 +44,7 @@ const InfoSection1 = () => {
               </button>
             </div> */}
 
-            <div className="flex w-full xl:mb-8 ">
+            <div className="flex w-full xl:mb-8 px-4 sm:px-0">
               <div className="flex w-full sm:w-[300px] items-center border-black border border-r-0 rounded-l-lg py-[10px] px-4">
                 <Phone className="text-black me-3 hidden md:block" size={20} />
                 <input

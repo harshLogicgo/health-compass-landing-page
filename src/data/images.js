@@ -14,5 +14,6 @@ export const Images = {
     user1: "/other/user1.webp",
     ctaBanner: "/other/ctaBanner.webp",
     simpleToolsBg: "/other/simpleToolsBg.webp",
+    play: "/other/play.webp",
   },
 };

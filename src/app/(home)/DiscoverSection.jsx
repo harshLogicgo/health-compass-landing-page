@@ -70,15 +70,25 @@ const DiscoverSection = () => {
           disableOnInteraction: false,
         }}
         breakpoints={{
-          0: { slidesPerView: 1.3, slidesOffsetBefore: 8 },
-          480: { slidesPerView: 1.7 },
-          640: { slidesPerView: 2.5 },
-          1024: {
-            slidesPerView: 3.5,
+          0: { slidesPerView: 1, slidesOffsetBefore: 8 },
+          550: { slidesPerView: 1.7 },
+          660: { slidesPerView: 2 },
+          1240: {
+            slidesPerView: 2.5,
             slidesOffsetBefore: 10,
             slidesOffsetAfter: 10,
           },
-          1440: {
+          1120: {
+            slidesPerView: 3.3,
+            slidesOffsetBefore: 10,
+            slidesOffsetAfter: 10,
+          },
+          1250:{
+            slidesPerView: 3.3,
+            slidesOffsetBefore: 10,
+            slidesOffsetAfter: 10,
+          },
+          1540: {
             slidesPerView: 4.5,
             slidesOffsetBefore: 8,
             slidesOffsetAfter: 0,

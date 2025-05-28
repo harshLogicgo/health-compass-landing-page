@@ -4,8 +4,7 @@
 
 @layer components {
   .bannerSection {
-    @apply bg-cover bg-left min-h-[480px];
-    height: calc(100vh - 300px);
+    @apply bg-cover bg-left min-h-[280px] sm:min-h-[480px] h-[calc(100vh-550px)] sm:h-[calc(100vh-400px)] lg:h-[calc(100vh-300px)] xl:h-[calc(100vh-94px)];
   }
 
   .infoPattern1 {
@@ -32,9 +31,16 @@
     @apply flex items-stretch;
   }
 
-  @screen md {
-    .bannerSection {
-      height: calc(100vh - 94px);
+  .zoom-animation {
+    animation: zoom-animation 1s linear infinite alternate;
+  }
+
+  @keyframes zoom-animation {
+    0% {
+      scale: 0.95;
+    }
+    100% {
+      scale: 1;
     }
   }
 }

@@ -95,7 +95,7 @@ export default function TestimonialsSection() {
       <div className="mx-auto">
         <div className="text-start main-container mb-12 ">
           <h2 className="section-title relative inline-block">
-            Our Happy People
+            Our Happy Client
             <img
               className="title-pattern top-[100%] left-[50%]"
               src={Images.other.titlePattern}
@@ -117,7 +117,7 @@ export default function TestimonialsSection() {
         <div className="relative testimonials-slider h-full">
           <Swiper
             modules={[Navigation, Pagination, A11y, Autoplay]}
-            spaceBetween={0}
+            spaceBetween={20} // Add some gap between slides
             slidesPerView={1}
             pagination={false}
             onSwiper={(swiper) => {
@@ -126,8 +126,8 @@ export default function TestimonialsSection() {
               setIsEnd(swiper.isEnd);
             }}
             autoplay={{
-              delay: 3000, // 4 seconds between slides
-              disableOnInteraction: false, // autoplay continues after user interaction
+              delay: 3000,
+              disableOnInteraction: false,
             }}
             breakpoints={{
               640: { slidesPerView: 1.5 },
@@ -146,15 +146,17 @@ export default function TestimonialsSection() {
               setIsBeginning(swiper.isBeginning);
               setIsEnd(swiper.isEnd);
             }}
-            className="pb-12"
+            className="pb-12 !overflow-visible select-none" // Ensure Swiper doesn't clip content
           >
-            {testimonials.map((testimonial) => (
-              <SwiperSlide className="py-6 p-4 h-full" key={testimonial.id}>
-                <div className="testimonial-card h-full flex flex-col">
+            {testimonials.map((testimonial, index) => (
+              <SwiperSlide
+                key={index}
+                className="!h-auto" // Let SwiperSlide adjust height
+              >
+                <div className="testimonial-card h-full flex flex-col bg-white shadow-md rounded-lg p-6">
                   <div className="flex items-center mb-3">
                     <Image
                       src={testimonial?.avatar || Images.other.user1}
-                      //   src={testimonial.avatar}
                       alt={testimonial.name}
                       width={80}
                       height={80}
@@ -171,7 +173,7 @@ export default function TestimonialsSection() {
                       </div>
                     </div>
                   </div>
-                  <p className="text-[15px]  text-gray-600">
+                  <p className="text-[15px] text-gray-600 flex-grow">
                     {testimonial.text}
                   </p>
                 </div>

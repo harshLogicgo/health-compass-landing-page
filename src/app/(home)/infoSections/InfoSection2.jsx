@@ -36,7 +36,7 @@ const InfoSection2 = () => {
             HealthCompass uses advanced AI to help older adults and caregivers
             manage
           </p>
-          <div className="space-y-3 mb-10 md:mb-12">
+          <div className="space-y-3 mb-8 md:mb-12">
             <div className="feature-item">
               <ShieldCheck className="feature-icon" size={20} />
               <span>Top quality dental team</span>
@@ -54,8 +54,8 @@ const InfoSection2 = () => {
               <span>Enrollment is quick and easy</span>
             </div>
           </div>
-          <div className="flex w-full mb-7 mt-14 sm:mt-6">
-            <div className="flex w-[300px] items-center border-black border border-r-0 rounded-l-lg py-[10px] px-4">
+          <div className="flex w-full mb-7 mt-14 sm:mt-6 px-4 sm:px-0">
+            <div className="flex w-full sm:w-[300px] items-center border-black border border-r-0 rounded-l-lg py-[10px] px-4">
               <Mail className="text-black me-3 hidden md:block" size={20} />
               <input
                 type="email"
