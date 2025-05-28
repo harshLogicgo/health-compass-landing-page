@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bannerSection {
+    @apply bg-cover bg-left min-h-[480px];
+    height: calc(100vh - 300px);
+  }
+
+  .infoPattern1 {
+    @apply absolute bottom-[-40px] z-[-1];
+  }
+
+  .pattern-l-top {
+    @apply absolute top-0 left-[50%] translate-x-[-50%] md:translate-x-0 md:left-[-17%];
+  }
+
+  .pattern-r-top {
+    @apply absolute top-0 md:right-[-17%] hidden md:block;
+  }
+
+  .title-pattern {
+    @apply absolute top-[50%] left-[40%] -translate-x-1/2 hidden xl:block;
+  }
+
+  @screen md {
+    .bannerSection {
+      height: calc(100vh - 126px);
+    }
+  }
+}

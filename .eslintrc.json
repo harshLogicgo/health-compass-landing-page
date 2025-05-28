@@ -1,0 +1,21 @@
+{
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    // Enforce consistent use of quotes
+    "quotes": ["error", "single"],
+    // Enforce semicolons
+    "semi": ["error", "always"],
+    // No unused variables
+    "no-unused-vars": ["warn"],
+    // Enforce consistent spacing
+    "indent": ["error", 2],
+    // Enforce consistent line endings
+    "linebreak-style": ["error", "unix"],
+    // Enforce consistent spacing before and after keywords
+    "keyword-spacing": ["error", { "before": true, "after": true }],
+    // Enforce consistent comma style
+    "comma-dangle": ["error", "always-multiline"],
+    // Enforce consistent object curly spacing
+    "object-curly-spacing": ["error", "always"]
+  }
+} 
